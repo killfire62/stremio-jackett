@@ -39,11 +39,3 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: killfire62/stremio-addon-jackett:latest
-
-      - name: 🚀 Build and push for version tag
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: killfire62/stremio-addon-jackett:${{ github.event.release.tag_name }}
